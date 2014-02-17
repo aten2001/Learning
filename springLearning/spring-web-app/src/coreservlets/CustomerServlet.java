@@ -25,7 +25,7 @@ public class CustomerServlet extends HttpServlet {
         request.setAttribute("id", id);
         address = "invalid-id.jsp";
       } else {
-        request.setAttribute("customer", customer);
+        jj.setAttribute("customer", customer);
         address = "show-customer.jsp";
       }
     }
