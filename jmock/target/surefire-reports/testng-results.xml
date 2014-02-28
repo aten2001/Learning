@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="org.learning.jmock.AppTest" duration-ms="23" started-at="2014-01-28T13:56:14Z" finished-at="2014-01-28T13:56:14Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="23" started-at="2014-01-28T13:56:14Z" finished-at="2014-01-28T13:56:14Z">
+      <class name="org.learning.jmock.AppTest">
+        <test-method status="PASS" signature="setupMocks()[pri:0, instance:org.learning.jmock.AppTest@4d83f797]" name="setupMocks" duration-ms="14" started-at="2014-01-28T13:56:14Z" finished-at="2014-01-28T13:56:14Z">
+        </test-method> <!-- setupMocks -->
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:org.learning.jmock.AppTest@4d83f797]" name="testCase1" duration-ms="1" started-at="2014-01-28T13:56:14Z" finished-at="2014-01-28T13:56:14Z">
+        </test-method> <!-- testCase1 -->
+      </class> <!-- org.learning.jmock.AppTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- org.learning.jmock.AppTest -->
+</testng-results>
