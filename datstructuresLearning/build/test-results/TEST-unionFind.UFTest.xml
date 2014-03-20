@@ -1,0 +1,13 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="unionFind.UFTest" tests="3" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Gokulvanans-MacBook-Air.local" time="1.392967865609E9">
+  <properties/>
+  <testcase name="testQuickFind" classname="unionFind.UFTest" time="0.023"/>
+  <testcase name="testQuickUnion" classname="unionFind.UFTest" time="0.001"/>
+  <testcase name="testQuickUnionEnhanced" classname="unionFind.UFTest" time="0.0"/>
+  <system-out><![CDATA[ In QuickFind test case
+ Time to perform 1000 union opeartions
+ In QuickUnion test case
+ In QuickUnionEnhanced test case
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

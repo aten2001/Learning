@@ -1,0 +1,79 @@
+/*
+buildscript {
+    repositories {
+        maven {
+            url 'http://maven.komlimobile.com/artifactory/plugins-snapshot'
+            credentials {
+                username = "km-master"
+                password = "master@123"
+            }
+        }
+         
+    }
+    dependencies {
+        classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '2.0.9')
+    }
+}
+ 
+allprojects {
+    apply plugin: 'artifactory'
+}
+ 
+artifactory {
+    contextUrl = "http://maven.komlimobile.com/artifactory"   //The base Artifactory URL if not overridden by the publisher/resolver
+    publish {
+        repository {
+            repoKey = 'libs-snapshot-local'
+            username = "km-master"
+            password = "master@123"
+            maven = true
+             
+        }
+    }
+    resolve {
+        repository {
+            repoKey = 'libs-snapshot'
+            username = "km-master"
+            password = "master@123"
+            maven = true
+             
+        }
+    }
+}
+
+*/
+
+
+apply plugin: "java"
+apply plugin: "eclipse"
+
+repositories {
+  mavenCentral()
+ /* maven { 
+      url = "http://maven.komlimobile.com/artifactory"
+        credentials {
+          username = "km-master"
+          password = "master@123"
+        }   
+    }  
+  */
+}
+
+
+dependencies { 
+  compile 'org.slf4j:slf4j-api:1.6.4' 
+  compile 'org.slf4j:slf4j-log4j12:1.6.4'
+  //compile(group: 'com.komli.social.client', name: 'connector', version: '0.0.1-SNAPSHOT')
+  testCompile 'org.testng:testng:6.5.1'
+}
+
+test {
+  useTestNG()
+  //testLogging.showStandardStreams = true
+  //logging.captureStandardOutput LogLevel.QUIET
+  onOutput { descriptor, event ->
+    logger.lifecycle(event.message )
+    //logger.quite("Test: " + descriptor + " produced standard out/err: " + event.message )
+  }
+}
+
