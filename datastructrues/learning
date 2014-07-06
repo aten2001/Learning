@@ -1,0 +1,167 @@
+
+UF Alog
+- QuickFind
+- QuickUnion
+- Weighted
+- pathCompression
+- Applicaiton - percolation - social networks etc..
+
+Analaysis:
+- PowerLaw - aN^b
+- BigOh, Tilde
+- BinarySearch, ThreeSum
+- StringConcat - linear order of growth
+- Log/log plots
+- opeartions and time take in nanoseconds
+- Memory
+
+Stack, Queue and Bags
+- Stack
+ - linked - constant time and space
+ - array - less wated space - amortized time
+- Queue
+ - Linked
+ - array (resizing, ringQueue)
+ - Applications
+   - for stack
+     - parising in compiler
+     - JVM
+     - undo in wordprocessor
+     - back button in browser
+     - can use an eplicit stack to remove tail recursive code
+
+ SimpleSort
+  - Selection
+  - Insertion
+  - Shell
+    while (h < sz/3) h = (3*h) + 1;
+  - Shuffle
+    Math.random(i+1);
+  - Convex Hull
+    Farthest points in a set of points are in convex hull
+    shortest path across obstacle is the convex hull
+    the vertices of a convex hull appear in increasing order of polar angle with respect to point p with lowest y corrdinate
+    dertiminant = (bx - ax) * (cy - ay) - (by - ay) * (cx - ax)
+      determinant > 0 -- ccw from b to c
+      determinant < 0 -- cw - from b to c
+      determinant = 0 -- colinear points
+    code implementation requires usage of stack.. to implement ccw logic
+    - to cmpoute poloar angle you may need to atan - which is expensive.. alternatively you can use ccw -- 
+    i.e. ccw of p, pt1 and pt2.. if positive.. then pt1 < pt2 in polar angle else not and collinear if == 0;
+
+MergeSort
+ - java -ea flag enables use of assertion.. which is brilliant way of checking code.. and this can be disabled in production using java -da
+ - java -server optimized it to run on server mode.. default mode of java is java -client
+ - A sorting algo is inplace if it uses less than cLogN extra memory
+ - Merge sort is stable, gurantee worstcase.
+ - Merget sort is the optimial compare based algo:
+ - Better algo in exception to this are :
+  - Partially ordered Arrays - Insertion Sort
+  - Duplicate Inputs - 3way Quick Sort
+  - Digital properties of keys - LSD Radix Sort
+ - Note insertion sort and merge sort are stable sorts
+  -- note to maintain stability in a sort.. need to have < and not <= is compare logic for swapping..
+  this is to ensure that equal items dont swap to maintain stability
+
+QuickSort
+ - not stable
+ - not good when there are duplicates
+ - Randomization provides probablistic gurantee
+ - a varaint of this can be used in QuickSelect (Top 5 - 6th highest etc..)
+ - NLogN algo for selection.. (Theortically there exists and Algo called PICK that can do selection kn 5N time.. (practically constant is to high hence not used in practice;
+ - Often items are sorted to bring similar keys together.. Sort population by age;
+ - 3way quick sort most efficient when duplicates are present in Data
+ - 3way quick sort is entropy optimal - reduces running time from linea arithmetic to linear to cases of duplicate inputs
+ - Turkeys ninther - better paritoining than leaving it to random function
+
+
+
+PQ
+- Applications 
+ - event driven simulation
+ - Datacompression
+ - Graphs Search 
+ - AI
+ - statstics
+ - Load balancing
+ - spam filtering
+
+- Find the largest M items in stream of N items;
+- exclent to use when input stream is huge and what we are intrested in are the top data points
+- order of growth NlogM
+
+Binary tree - Emtpy or node with links to left and right binnary tree
+Complete Tree - Perfectly balanced except for the bottom level
+
+PQ also support removal of arbitary item and changing priority of certain items
+
+Application of sink method can be used in heapsort.
+heapsort is inplace NlogN algo
+but inner loop is longer than quick sort .. hence slower than quick sort in practice;
+heapsort is not stable and makes poor use of cache memory
+
+Application of ST
+- SparseVector matrix multiplicaiton
+- Dictonary Lookup
+- Concordance
+
+
+Graph Terminology
+- Path
+- Cycle
+- Vertex
+- Edge
+- Degree of a Vertex
+- Connected Components
+
+- Shortest Path
+- Euler Tour - cycle connecting each vertex exactly once
+- Hamilton Tour - cycle connection each edge exactly once
+
+- Connectivity - way to connect all the vertices
+- MST - best way to connect all the vertices (mimum length)
+- Biconnectivity - a connectivity with a vertice whose removal disconnects the graph
+
+- Planarity - Graph can be drawn on a plane without crossing edges
+- Graph Isomorphism - Do two adjaceny list represent the same graph
+
+Most graph algo are based on iterating over vertices adjacent to a specified vertex.
+Hence irrespective of underlying implementation the graph datastructure should support
+- adj(int v) and addEdge(int v, int w);
+
+Two ways to represent a Graph 
+ - AdjacencyList - better for sparse graphs
+ - AdjacentyMatrix - better for dense graphs - disallows parallel edges
+
+Suffix Trie
+
+1) Add $ to end of Text T
+2) Substring search
+3) Is Suffix
+4) Number of occurances = number of leaves at that node ending
+5) Longest repeated substring = depest length node with more than one leaf
+6) Number of nodes in Suffix trie goes Linear (2N+2) for reapeated String and Quadratioc N(N+1)/2 for distinct Strings
+7) Suffix Trie grows super linear - between linear and quadratic for length of a string
+
+Suffix trie impractical because of quadratic order of growth
+
+Suffix tree
+Colace no branchin nodes - hence all internal nodes have >1 child
+If number of leaf nodes in binary tree is N then number of non-leaf nodes = N-1
+
+If number of leaf nodes is M then non leaf is at most M-1 incase os suffix trie i.e. collaced
+hence upper bound on nodes in collaced suffix trie = 2m-1 == O(m)
+Still each label stored in tree is having char i.e. - N^2 chars order of growth
+Better idea to not store substring in edges but offset and length that represent the substring
+Leavs here have number i.e. the max offset to their path
+Node Depth , Label Depth:\
+
+
+
+
+ababac
+
+    a   b   c   $
+    c   a    $
+     $  c
+         $
