@@ -19,7 +19,6 @@ public class PrimsMST {
       if(!marked[v]) visit(G,v,pq);
       if(!marked[w]) visit(G,w,pq);
     }
-
   }
 
   private void visit(EdgeWeightedDirectedGraph G, int i, MinPQ pq){

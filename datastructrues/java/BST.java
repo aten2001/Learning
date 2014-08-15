@@ -172,13 +172,13 @@ public class BST<Key,Value> {
   }
 
   private Node recDelete(Node n,Key k){
-    if(n == null) return;
+    if(n == null) return null;
     int cmp = k.compareTo(n.key);
-    if(cmp < 0) n = recDelete(n.left,k);
-    else if(cmp > 0) n = recDelete(n.right,k);
+    if(cmp < 0) n.left = recDelete(n.left,k);
+    else if(cmp > 0) n.right = recDelete(n.right,k);
     else{
       if(n.right == null) return n.left;
-
+      if (n.left == null) return n.right;
       Node m = min(n.right);
       n.right = delMin(n.right);
       n.key = m.key;

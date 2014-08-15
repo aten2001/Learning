@@ -9,7 +9,7 @@ public class HeapSort {
     }
 
     while(N-- > 0){ // sort array
-      swap(data,1,j);
+      swap(data,1,N+1);
       sink(data,1);
     }
 

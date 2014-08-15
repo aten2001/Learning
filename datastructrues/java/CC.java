@@ -15,7 +15,8 @@ public class CC{
     for(int i=0; i<G.V(); i++){
       if(this.marked[i]) continue;
       this.id[i]=count;
-      dfs(G,i,count++);
+      dfs(G,i,count);
+      count++;
     }
   }
 

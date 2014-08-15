@@ -234,8 +234,12 @@ public class LLRBBST<Key,Value> {
       n.right = delMin(n.right);
       n.key = m.key;
       n.value = m.value;
+      n.color = m.color
     }
     n.count = 1 + sizeOf(n.left) + sizeOf(n.right);
+    if(isRed(n.right) && !isRed(n.left)) rotateLeft(n);
+    if(isRed(n.left) && isRed(n.left.left)) rotateRight(n);
+    if(isRed(n.left) && isRed(n.right)) flipColors(n);
     return n;
   }
 

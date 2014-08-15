@@ -3,7 +3,7 @@ public class Graph {
 
   private final int V;
   private int E;
-  private int[] vertices;
+  private Bag<Integer>[] vertices;
 
   public Graph(int V){
     this.V = V;

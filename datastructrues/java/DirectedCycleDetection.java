@@ -22,7 +22,6 @@ public class DirectedCycleDetection{
     this.marked[i]=true;
     this.cycle[i]=true;
     for(int v: G.adj(i)){
-      this.edgeTo[v]=i;
       if(this.cycle[v]) {
         this.cyclePath = new Stack<Integer>();
         cyclePath.push(v);
@@ -33,6 +32,7 @@ public class DirectedCycleDetection{
       }
       else{
         if(this.marked[v]) continue;
+        this.edgeTo[v]=i;
         dfs(G,v);
       }
     }

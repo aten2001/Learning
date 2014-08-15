@@ -50,7 +50,7 @@ public class LSD {
     if(i == 2) val = val >>> 8;
     else if(i == 1) val = val >>> 16;
     else if(i == 0) val = val >>> 24;
-    return 0x0000FF00 & val;
+    return 0x000000FF & val;
   }
 
 }

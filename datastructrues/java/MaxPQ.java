@@ -40,9 +40,11 @@ public class MaxPQ {
   private void swim(int k){
    int parent = k/2;
    while(parent >=1){
-     if(data[parent] < data[k]) swap(data,parent,k);
-     k = parent;
-     parent = parent/2;
+     if(data[parent] < data[k]){
+       swap(data,parent,k);
+       k = parent;
+       parent = parent/2;
+     }
    }
   }
 
