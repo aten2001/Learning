@@ -18,6 +18,16 @@ public class SyncAsyncObservable {
 //		});
 //	}
 	
+	public static interface BeautifulGirl{
+		
+		public String getName();
+		
+	}
+	
+	public BeautifulGirl getMeMyWife(){
+		return  (() -> "neeraj");
+	}
+	
 	private static Observable<String> blockingObservable2(){
 		return Observable.create(new OnSubscribe<String>() {
 
@@ -44,6 +54,12 @@ public class SyncAsyncObservable {
 					public void run() {
 						for(int i=0; (i<50 && !aSubsciber.isUnsubscribed()); i++){
 							aSubsciber.onNext("value_"+i);
+							try {
+								Thread.sleep(10);
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 						}
 						if(!aSubsciber.isUnsubscribed()){
 							aSubsciber.onCompleted();
@@ -54,12 +70,16 @@ public class SyncAsyncObservable {
 		});
 	}
 	public static void main(String[]  args){
-		blockingObservable2().subscribe(it -> System.out.println(it));
-		asyncObservable().subscribe(it -> System.out.println(it));
+		Observable<String> ob =blockingObservable2();
+//		Observable<String> ob = asyncObservable();
+		ob.subscribe(it -> System.out.println(it));
+		ob.subscribe(it -> System.out.println("2"+it));
+		;
+//		asyncObservable().subscribe(it -> System.out.println(it));
 		
-		asyncObservable().skip(10).take(5)
-		.map(val -> val + "_mapped")
-		.subscribe(it -> System.out.println(it));
+//		asyncObservable().skip(10).take(5)
+//		.map(val -> val + "_mapped")
+//		.subscribe(it -> System.out.println(it));
 	}
 	
 }
