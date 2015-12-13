@@ -1,0 +1,63 @@
+objc[5194]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/MacOS/libjli.dylib and /Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/libinstrument.dylib. One of the two will be used. Which one is undefined.
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /Users/gokulvanan.v/Workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.5.0.20140606-0033.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+[INFO] Setting property: classpath.resource.loader.class => 'org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader'.
+[INFO] Setting property: velocimacro.messages.on => 'false'.
+[INFO] Setting property: resource.loader => 'classpath'.
+[INFO] Setting property: resource.manager.logwhenfound => 'false'.
+2015-07-04 21:52:12.722 eclipse[5194:162108] Unable to simultaneously satisfy constraints:
+(
+    <NSAutoresizingMaskLayoutConstraint:0x122777b00 h=--& v=--& V:[FI_TBrowserBackgroundView:0x12c5d2c40(0)]>,
+    <NSAutoresizingMaskLayoutConstraint:0x12c5ca420 h=-&- v=-&- V:|-(0)-[FI_TListScrollView:0x130c481c0]   (Names: '|':FI_TBrowserBackgroundView:0x12c5d2c40 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x12c5ca3d0 h=-&- v=-&- V:[FI_TListScrollView:0x130c481c0]-(0)-|   (Names: '|':FI_TBrowserBackgroundView:0x12c5d2c40 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x130c4d460 h=-&- v=-&- V:[NSClipView:0x130c47eb0]-(15)-|   (Names: '|':FI_TListScrollView:0x130c481c0 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x130c4d410 h=-&- v=-&- V:|-(0)-[NSClipView:0x130c47eb0]   (Names: '|':FI_TListScrollView:0x130c481c0 )>
+)
+
+Will attempt to recover by breaking constraint 
+<NSAutoresizingMaskLayoutConstraint:0x130c4d460 h=-&- v=-&- V:[NSClipView:0x130c47eb0]-(15)-|   (Names: '|':FI_TListScrollView:0x130c481c0 )>
+
+Set the NSUserDefault NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints to YES to have -[NSWindow visualizeConstraints:] automatically called when this happens.  And/or, break on objc_exception_throw to catch this in the debugger.
+Jul 10 01:09:10 flipkarts-MacBook-Pro-2.local eclipse[5194] <Error>: ripc_DrawWindowContents - Cannot acquire window image
+Jul 10 01:18:53 flipkarts-MacBook-Pro-2.local eclipse[5194] <Error>: ripc_DrawWindowContents - Cannot acquire window image
+2015-07-11 10:33:33.297 eclipse[5194:162108] Unable to simultaneously satisfy constraints:
+(
+    <NSAutoresizingMaskLayoutConstraint:0x1344234f0 h=--& v=--& V:[FI_TBrowserBackgroundView:0x1431ee420(0)]>,
+    <NSAutoresizingMaskLayoutConstraint:0x13e0d71f0 h=-&- v=-&- V:|-(0)-[FI_TListScrollView:0x13e39ed90]   (Names: '|':FI_TBrowserBackgroundView:0x1431ee420 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x13e0a4760 h=-&- v=-&- V:[FI_TListScrollView:0x13e39ed90]-(0)-|   (Names: '|':FI_TBrowserBackgroundView:0x1431ee420 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x13879ac30 h=-&- v=-&- V:[NSClipView:0x13e276690]-(15)-|   (Names: '|':FI_TListScrollView:0x13e39ed90 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x12b8620f0 h=-&- v=-&- V:|-(0)-[NSClipView:0x13e276690]   (Names: '|':FI_TListScrollView:0x13e39ed90 )>
+)
+
+Will attempt to recover by breaking constraint 
+<NSAutoresizingMaskLayoutConstraint:0x13879ac30 h=-&- v=-&- V:[NSClipView:0x13e276690]-(15)-|   (Names: '|':FI_TListScrollView:0x13e39ed90 )>
+
+Set the NSUserDefault NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints to YES to have -[NSWindow visualizeConstraints:] automatically called when this happens.  And/or, break on objc_exception_throw to catch this in the debugger.
+2015-07-11 12:13:20.281 eclipse[5194:162108] Unable to simultaneously satisfy constraints:
+(
+    <NSAutoresizingMaskLayoutConstraint:0x13e35b710 h=--& v=--& V:[FI_TBrowserBackgroundView:0x13f407240(0)]>,
+    <NSAutoresizingMaskLayoutConstraint:0x13e3d6240 h=-&- v=-&- V:|-(0)-[FI_TListScrollView:0x13f631ec0]   (Names: '|':FI_TBrowserBackgroundView:0x13f407240 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x13e3d61f0 h=-&- v=-&- V:[FI_TListScrollView:0x13f631ec0]-(0)-|   (Names: '|':FI_TBrowserBackgroundView:0x13f407240 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x13150a080 h=-&- v=-&- V:[NSClipView:0x13f64e520]-(15)-|   (Names: '|':FI_TListScrollView:0x13f631ec0 )>,
+    <NSAutoresizingMaskLayoutConstraint:0x13150a030 h=-&- v=-&- V:|-(0)-[NSClipView:0x13f64e520]   (Names: '|':FI_TListScrollView:0x13f631ec0 )>
+)
+
+Will attempt to recover by breaking constraint 
+<NSAutoresizingMaskLayoutConstraint:0x13150a080 h=-&- v=-&- V:[NSClipView:0x13f64e520]-(15)-|   (Names: '|':FI_TListScrollView:0x13f631ec0 )>
+
+Set the NSUserDefault NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints to YES to have -[NSWindow visualizeConstraints:] automatically called when this happens.  And/or, break on objc_exception_throw to catch this in the debugger.
+2015-07-13 11:59:38.567 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image"))
+2015-07-13 11:59:38.568 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Operand expression not safe to execute SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image"))
+2015-07-13 11:59:38.568 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count
+2015-07-13 11:59:38.568 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0)
+2015-07-13 11:59:38.569 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Operand expression not safe to execute SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0)
+2015-07-13 11:59:38.569 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0).@count
+2015-07-13 11:59:38.569 eclipse[5194:162108] NSExtensionIsPredicateSafeToExecuteWithObject: NSPredicate considered unsafe: SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0).@count == 1
+2015-07-13 11:59:38.571 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image"))
+2015-07-13 11:59:38.572 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Operand expression not safe to execute SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image"))
+2015-07-13 11:59:38.572 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count
+2015-07-13 11:59:38.572 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0)
+2015-07-13 11:59:38.572 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Operand expression not safe to execute SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0)
+2015-07-13 11:59:38.572 eclipse[5194:162108] _NSExtensionIsSafeExpressionForObjectWithSubquerySubstitutions: Expression considered unsafe: SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0).@count
+2015-07-13 11:59:38.573 eclipse[5194:162108] NSExtensionIsPredicateSafeToExecuteWithObject: NSPredicate considered unsafe: SUBQUERY(extensionItems, $extensionItem, $extensionItem.attachments.@count == 1 AND SUBQUERY($extensionItem.attachments, $attachment, (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf") AND (NOT ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.image")).@count == 0).@count == 1
