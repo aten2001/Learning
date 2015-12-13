@@ -1,0 +1,19 @@
+
+Encryption:
+ 2 basic types 
+  - Asymetric - public and private key
+   - encrypt with public and a matching private key for decryption
+   - private key can decrypt
+   or reversible roles of private and public
+  - Symetric
+   symetrics uses  one private key for both encryption and decryption
+
+   PKI - public key i - used when we have 2 differen end points like client and server (VPN servers, secure shell ssh, websites, sftp) 
+
+Symetric encryption in apps storing db and getting from db
+symetric encryption is way faster than asymetric. 
+Symetrics encryption is simpler
+
+twoFish, blowFish , 3DES, AES - encryption Algo
+DES - data encryption standard
+AES - advanced encryption standard
