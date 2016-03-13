@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="spring-foundations" default="compile" basedir=".">
+
+  <!-- locations -->
+  <property name="src" location="${basedir}/src" />
+  <property name="resources" location="${basedir}/src" />
+  <property name="build.classes" location="${basedir}/target/classes" />
+  <path id="src.path">
+    <pathelement path="${src}" />
+  </path>
+  <path id="class.path">
+    <fileset dir="${basedir}/lib" includes="*.jar"/>
+  </path>
+
+  <!-- compile -->
+  <target name="compile" depends="prepare">
+    <javac destdir="${build.classes}" debug="on" debugLevel="lines,vars,source"
+        nowarn="off" memoryMaximumSize="128m" fork="true" >
+      <compilerarg line="" />
+      <src refid="src.path" />
+      <classpath>
+        <path refid="class.path" />
+      </classpath>
+    </javac>
+  </target>
+
+  <!-- clean -->
+  <target name="clean" description="clean up">
+    <delete dir="${basedir}/target" />
+  </target>
+
+  <!-- support targets -->
+  <target name="prepare">
+    <mkdir dir="${build.classes}" /> 
+    <copy todir="${build.classes}">
+      <fileset dir="${resources}">
+        <exclude name="**/*.java"/>
+      </fileset>
+    </copy>
+  </target>
+
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C75A4EDB-8B96-4B09-8273-E6D60EE62FC6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CplusplusLearning</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>865F71318EE07345F5E90AC92C2C291F97DBB795</key>
+		<string>github.com:gokulvanan/Learning.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cplusplus/xcodeProject/CplusplusLearning/CplusplusLearning.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>865F71318EE07345F5E90AC92C2C291F97DBB795</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:gokulvanan/Learning.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>865F71318EE07345F5E90AC92C2C291F97DBB795</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>865F71318EE07345F5E90AC92C2C291F97DBB795</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Learning</string>
+		</dict>
+	</array>
+</dict>
+</plist>
