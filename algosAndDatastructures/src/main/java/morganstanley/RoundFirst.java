@@ -34,7 +34,7 @@ public class RoundFirst implements l1, l2 {
  String odipus = null;
  public static void main(String...strings) throws FileNotFoundException{
 	 Reader st = new FileReader(new File(""));
-	 st.
+//	 st.
 	 Scanner sc = new Scanner(System.in);
 	 while(sc.hasNext())
 		 System.out.println(sc.next());
