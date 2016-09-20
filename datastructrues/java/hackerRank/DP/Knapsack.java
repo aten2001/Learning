@@ -1,4 +1,5 @@
 /*
+ * https://www.hackerrank.com/challenges/fair-cut/editorial
  *
  * https://www.hackerrank.com/challenges/unbounded-knapsack
  */
