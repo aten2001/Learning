@@ -12,8 +12,13 @@ import kafka.producer.ProducerConfig;
 public class KafkaProducerLearning {
 
 	public static void main(String[] args) throws UnknownHostException{
+<<<<<<< HEAD
 		Properties props = new Properties();
 		props.put("metadata.broker.list", "flo-oms-app1.stage.ch.flipkart.com:9092");
+=======
+        /*
+		Properties props = new Properties();
+>>>>>>> 7d1351d97eae4ba2a033021139ca67d2087f40a6
 		props.put("serializer.class", "kafka.serializer.StringEncoder");
 		props.put("partitioner.class", "example.producer.SimplePartitioner");
 		props.put("request.required.acks", "1");
@@ -28,5 +33,9 @@ public class KafkaProducerLearning {
 			String msg ="test";
 			KeyedMessage<String, String> data = new KeyedMessage<String, String>("test", key, partKey, message)
 		}
+<<<<<<< HEAD
+=======
+        */
+>>>>>>> 7d1351d97eae4ba2a033021139ca67d2087f40a6
 	}
 }

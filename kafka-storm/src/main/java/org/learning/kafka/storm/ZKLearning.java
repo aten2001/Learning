@@ -10,7 +10,11 @@ public class ZKLearning {
 
 	public static void main(String[] ags) throws Exception{
 		
+<<<<<<< HEAD
 		CuratorFramework connPool = CuratorFrameworkFactory.newClient("flo-oms-app1.stage.ch.flipkart.com:2181",new ExponentialBackoffRetry(1000, 3));
+=======
+		CuratorFramework connPool = CuratorFrameworkFactory.newClient("localhost:2181",new ExponentialBackoffRetry(1000, 3));
+>>>>>>> 7d1351d97eae4ba2a033021139ca67d2087f40a6
 		connPool.start();
 		Stat  stat = connPool.checkExists().forPath("/newtest");
 		if(stat != null){

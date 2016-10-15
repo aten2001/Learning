@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>datstructuresLearning</name>
+=======
+	<name>algosAndDatastructures</name>
+>>>>>>> 7d1351d97eae4ba2a033021139ca67d2087f40a6
 	<comment/>
 	<projects/>
 	<natures>

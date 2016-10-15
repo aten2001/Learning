@@ -59,6 +59,11 @@ repositories {
   */
 }
 
+<<<<<<< HEAD
+=======
+apply plugin: 'application'
+mainClassName = "code.cheff.RGame"
+>>>>>>> 7d1351d97eae4ba2a033021139ca67d2087f40a6
 
 dependencies { 
   compile 'org.slf4j:slf4j-api:1.6.4' 
