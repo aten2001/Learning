@@ -1,9 +1,53 @@
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class ShortestReach {
+
+    public static class Bag<T> implements Iterable<T> {
+
+        public static class Node<T> {
+            public T val;
+            public Node<T> next;
+        }
+
+        public Node<T> first;
+
+        public boolean isEmpty(){
+            return this.first == null;
+        }
+
+        public void add(T obj){
+            Node<T> node = new Node<T>();
+            node.val = obj;
+            node.next = this.first;
+            this.first = node;
+        }
+
+        public static class BagIt<T> implements Iterator<T>{
+
+            private Node<T> root;
+            public BagIt(Node<T> root) {
+                this.root = root;
+            }
+            @Override
+                public boolean hasNext() {
+                    return root != null;
+                }
+
+            @Override
+                public T next() {
+                    T val = root.val;
+                    root = root.next;
+                    return val;
+                }
+        }
+
+        @Override
+        public Iterator<T> iterator() {
+            return new BagIt<T>(first);
+        }
+
+    }
 
 
     public static class Graph {
@@ -13,7 +57,7 @@ public class ShortestReach {
         public Graph(int V){
             this.adj = new ArrayList[V];
             for(int i=0; i<V; i++){
-                this.adj[i] = new ArrayList<Edge>();
+                this.adj[i] = new ArrayList<Edge>(V);
             }
         }
 
@@ -23,7 +67,7 @@ public class ShortestReach {
             this.adj[w].add(edge);
         }
 
-        public List<Edge> adj(int v){
+        public Collection<Edge> adj(int v){
             return this.adj[v];
         }
 
@@ -72,7 +116,9 @@ public class ShortestReach {
             this.distTo[src] = 0;
             IndexMinPQ queue = new IndexMinPQ(G.V());
             queue.add(this.src,0);
+            long start = System.currentTimeMillis();
             search(G,queue);
+            System.out.println(System.currentTimeMillis() - start);
         }
 
         private void search(Graph G, IndexMinPQ queue){
@@ -171,7 +217,7 @@ public class ShortestReach {
             int w = v + 1;
             if (v < n){
                 if(w < n){
-                    v = greater(v,w) ? v : w;
+                    v = greater(w,v) ? v : w;
                 }
                 if(greater(i,v)){
                     swap(i,v);
@@ -193,19 +239,58 @@ public class ShortestReach {
         }
     }
 
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        while(T-- > 0){
-            int N = sc.nextInt();
-            int M = sc.nextInt();
-            Graph G = new Graph(N);
-            while(M-- > 0){
-                G.addEdge(sc.nextInt()-1,sc.nextInt()-1,sc.nextInt());
+
+
+    public static void main(String[] args) throws IOException {
+        try(BufferedReader reader = new  BufferedReader(new InputStreamReader(System.in),32768)){
+            String[] line = reader.readLine().split("\\s");
+            int T = Integer.parseInt(line[0]);
+            while(T-- > 0){
+                line = reader.readLine().split("\\s");
+                int N = Integer.parseInt(line[0]);
+                int M = Integer.parseInt(line[1]);
+                Graph G = new Graph(N);
+                while(M-- > 0){
+                    //line = reader.readLine().split("\\s");
+                    //int v = Integer.parseInt(line[0]);
+                    //int w = Integer.parseInt(line[1]);
+                    //int wt = Integer.parseInt(line[2]);
+
+                    String buff = reader.readLine();
+                    int a = buff.indexOf(' ');
+                    int b = buff.indexOf(' ',a+1);
+                    int v = parseInt(buff.substring(0,a));
+                    int w = parseInt(buff.substring(a+1,b));
+                    int wt =parseInt(buff.substring(b+1,buff.length()));
+                    G.addEdge(v-1,w-1,wt);
+                    //G.addEdge(sc.nextInt()-1,sc.nextInt()-1,sc.nextInt());
+                }
+                line = reader.readLine().split("\\s");
+                int source = Integer.parseInt(line[0]);
+                //SP sp = new SP(G,source-1);
+                //System.out.println(sp.path());
             }
-            SP sp = new SP(G,sc.nextInt()-1);
-            System.out.println(sp.path());
         }
     }
+
+    public static int parseInt( final String s )
+    {
+        // Check for a sign.
+        int num  = 0;
+        int sign = -1;
+        final int len  = s.length( );
+        final char ch  = s.charAt( 0 );
+        if ( ch == '-' )
+            sign = 1;
+        else
+            num = '0' - ch;
+
+        // Build the number.
+        int i = 1;
+        while ( i < len )
+            num = num*10 + '0' - s.charAt( i++ );
+
+        return sign * num;
+    } 
 
 }
