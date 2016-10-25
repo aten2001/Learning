@@ -171,7 +171,7 @@ public class ShortestReach {
             int w = v + 1;
             if (v < n){
                 if(w < n){
-                    v = greater(v,w) ? v : w;
+                    v = greater(w,v) ? v : w;
                 }
                 if(greater(i,v)){
                     swap(i,v);
