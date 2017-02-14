@@ -21,6 +21,12 @@
 			<version>4.2</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.6.Final</version>
+		</dependency>
 
 		<!-- Added for in memory database use in testing -->
 		<dependency>
@@ -31,11 +37,11 @@
 		</dependency>
 
 
-    <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
-      <version>1.9.12</version>
-    </dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.12</version>
+		</dependency>
 
 
 		<dependency>
